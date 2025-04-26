@@ -3,7 +3,7 @@ import React from 'react';
 const Navbar = ({theme}) => {
 
     return (
-        <div className={`navbar fixed top-0 left-0 right-0 z-50 ${theme=== "glass" ? "bg-green-500/20 backdrop-blur-lg": "bg-base-100"} shadow-sm`}>
+        <div className={`navbar fixed top-0 left-0 right-0 z-50 ${theme=== "glass" ? "bg-black-400/10 backdrop-blur-xs": "bg-base-100"} shadow-sm`}>
             <div className="container flex mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
