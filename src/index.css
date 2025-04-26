@@ -1,1 +1,35 @@
 @import "tailwindcss";
+@plugin "flowbite-react/plugin/tailwindcss";
+@source "../.flowbite-react/class-list.json";
+@plugin "daisyui" {
+    themes: light --default;
+}
+
+
+.menu {
+    & :where(li) {
+        & > :not(ul, .menu-title, details, .btn):active, & > :not(ul, .menu-title, details, .btn).menu-active, & > details > summary:active {
+            /*color: var(--menu-active-fg);*/
+            background-color: #1D503A;
+            /*background-size: auto, calc(var(--noise) * 100%);*/
+            /*background-image: none, var(--fx-noise);*/
+        }
+    }
+}
+
+.menu {
+    & :where(li:not(.menu-title, .disabled) > :not(ul, details, .menu-title):not(.menu-active, :active, .btn):hover, li:not(.menu-title, .disabled) > details > summary:not(.menu-title):not(.menu-active, :active, .btn):hover) {
+        @supports (color: color-mix(in lab, red, red)) {
+            background-color: transparent;
+                    /*color-mix(in oklab, #1D503A 10%, transparent);*/
+        }
+    }
+}
+
+
+@theme {
+    --color-eggshell-white: #FAF5EE;
+    --color-dark-emerald: #1D503A;
+    --font-primary: "Montserrat", sans-serif;
+}
+
