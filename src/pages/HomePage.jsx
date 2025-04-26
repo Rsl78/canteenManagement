@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import Navbar from '../components/Navbar.jsx';
 import Card from '../components/Card.jsx';
 import Footer from '../components/Footer.jsx';
+import CategoryCard from '../components/CategoryCard.jsx';
 
 const HomePage = () => {
     const [isHeroVisible, setIsHeroVisible] = useState(true);
@@ -50,6 +51,9 @@ const HomePage = () => {
                         <button className="btn btn-primary">Order Now</button>
                     </div>
                 </div>
+            </div>
+            <div className='container mx-auto'>
+                <CategoryCard/>
             </div>
             <div className="container flex flex-wrap gap-4 justify-between mx-auto py-10">
                 <Card />
