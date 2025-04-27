@@ -61,10 +61,10 @@ const Navbar = () => {
               </li>
               <li className="hover:bg-transparent active:bg-transparent active:text-current">
                 <NavLink
-                  to="/cart"
+                  to="/order"
                   className={({ isActive }) => (isActive ? "active" : "")}
                 >
-                  Home
+                  Order
                 </NavLink>
               </li>
             </ul>
@@ -101,10 +101,10 @@ const Navbar = () => {
               </li>
               <li className="hover:bg-transparent active:bg-transparent active:text-current">
                 <NavLink
-                  to="/cart"
+                  to="/order"
                   className={({ isActive }) => (isActive ? "active" : "")}
                 >
-                  Home
+                  Order
                 </NavLink>
               </li>
             </ul>
