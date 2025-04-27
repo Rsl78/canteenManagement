@@ -1,15 +1,15 @@
 import React from 'react';
-import HomePage from "./pages/HomePage.jsx";
-import LoginPage from "./pages/LoginPage.jsx";
-import RegistrationPage from "./pages/RegistrationPage.jsx";
-import OrderPage from "./pages/OrderPage.jsx";
+import Navbar from './components/Navbar.jsx';
+import { Outlet } from 'react-router';
+import Footer from './components/Footer.jsx';
 
 const App = () => {
     return (
-        <div>
-            <h1 className="text-3xl font-bold underline">
-            </h1>
-        </div>
+        <>
+            <Navbar/>
+            <Outlet/>
+            <Footer/>
+        </>
     );
 };
 
