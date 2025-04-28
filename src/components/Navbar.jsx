@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router";
+import logo from "../assets/image/logo.png"
 
 // const Navbar = ({ theme }) => {
 const Navbar = () => {
@@ -38,7 +39,7 @@ const Navbar = () => {
               <li className="menu-item-active">
                 <NavLink
                   to="/"
-                  className={({ isActive }) => (isActive ? "active" : "")}
+                  className={({ isActive }) => (isActive ? "text-dark-emerald" : "")}
                 >
                   Home
                 </NavLink>
@@ -46,7 +47,7 @@ const Navbar = () => {
               <li className="hover:bg-transparent active:bg-transparent active:text-current">
                 <NavLink
                   to="/menu"
-                  className={({ isActive }) => (isActive ? "active" : "")}
+                  className={({ isActive }) => (isActive ? "text-dark-emerald" : "")}
                 >
                   Menu
                 </NavLink>
@@ -54,7 +55,7 @@ const Navbar = () => {
               <li className="hover:bg-transparent active:bg-transparent active:text-current">
                 <NavLink
                   to="/cart"
-                  className={({ isActive }) => (isActive ? "active" : "")}
+                  className={({ isActive }) => (isActive ? "text-dark-emerald" : "")}
                 >
                   Cart
                 </NavLink>
@@ -62,14 +63,15 @@ const Navbar = () => {
               <li className="hover:bg-transparent active:bg-transparent active:text-current">
                 <NavLink
                   to="/order"
-                  className={({ isActive }) => (isActive ? "active" : "")}
+                  className={({ isActive }) => (isActive ? "text-dark-emerald" : "")}
                 >
                   Order
                 </NavLink>
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          {/*<a className="btn btn-ghost text-xl">daisyUI</a>*/}
+          <img className={"h-12 w-12"} src={logo}/>
         </div>
 
         <div className="navbar-end">
@@ -78,7 +80,7 @@ const Navbar = () => {
               <li className="menu-item-active">
                 <NavLink
                   to="/"
-                  className={({ isActive }) => (isActive ? "active" : "")}
+                  className={({ isActive }) => (isActive ? "text-dark-emerald" : "")}
                 >
                   Home
                 </NavLink>
@@ -86,7 +88,7 @@ const Navbar = () => {
               <li className="hover:bg-transparent active:bg-transparent active:text-current">
                 <NavLink
                   to="/menu"
-                  className={({ isActive }) => (isActive ? "active" : "")}
+                  className={({ isActive }) => (isActive ? "text-dark-emerald" : "")}
                 >
                   Menu
                 </NavLink>
@@ -94,7 +96,7 @@ const Navbar = () => {
               <li className="hover:bg-transparent active:bg-transparent active:text-current">
                 <NavLink
                   to="/cart"
-                  className={({ isActive }) => (isActive ? "active" : "")}
+                  className={({ isActive }) => (isActive ? "text-dark-emerald" : "")}
                 >
                   Cart
                 </NavLink>
@@ -102,7 +104,7 @@ const Navbar = () => {
               <li className="hover:bg-transparent active:bg-transparent active:text-current">
                 <NavLink
                   to="/order"
-                  className={({ isActive }) => (isActive ? "active" : "")}
+                  className={({ isActive }) => (isActive ? "text-dark-emerald" : "")}
                 >
                   Order
                 </NavLink>

@@ -4,7 +4,7 @@ import CategoryCard from "./CategoryCard.jsx";
 import breakfastIcon from "../../assets/icon/breakfast.svg"
 import lunchIcon from "../../assets/icon/lunch.svg"
 import dinnerIcon from "../../assets/icon/dinner.svg"
-import snackIcon from "../../assets/icon/sancks.svg"
+import snackIcon from "../../assets/icon/snacks.svg"
 import beverageIcon from "../../assets/icon/beverage.svg"
 import iceCreamIcon from "../../assets/icon/iceCream.svg"
 import dessertIcon from "../../assets/icon/dessert.svg"
