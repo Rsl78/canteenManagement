@@ -1,0 +1,13 @@
+import arrowIcon from "../../assets/icon/arrow.svg";
+
+
+const CartButton = () => {
+    return (
+        <button className="btn bg-dark-emerald text-white  rounded-md items-center py-1 mt-1 w-[300px]">
+            <span className="text-white font-base align-middle">Place Order</span>
+
+        </button>
+    );
+};
+
+export default CartButton;

@@ -1,12 +1,13 @@
 import React from "react";
 import HeroSection from "../components/HeroSection";
 import Card from "../components/Card";
+import ShortCartCard from "../components/ShortCart/ShortCartCard.jsx";
+import CartButton from "../components/Cart/CartButton.jsx";
 
 const MenuPage = () => {
   return (
     <div className="bg-eggshell-white min-h-screen">
       <HeroSection />
-
       <div className="container mx-auto py-10">
         <div className="grid grid-cols-7 gap-6">
           {/* Scrollable card section */}
@@ -32,17 +33,12 @@ const MenuPage = () => {
                   {/* Content for your fixed sidebar */}
                   {
                     // Example of a summary item
-                    Array.from({ length: 5 }).map((_, index) => (
-                      <div
-                        key={index}
-                        className="flex justify-between py-2 px-3 rounded bg-gray-50 hover:bg-gray-100 transition-colors"
-                      >
-                        <span className="font-medium">Item {index + 1}</span>
-                        <span className="text-gray-700">$10.00</span>
-                      </div>
+                    Array.from({ length: 10 }).map((_, index) => (
+                      <ShortCartCard key={{index}} itemName = {index}/>
                     ))
                   }
                 </div>
+                <CartButton/>
               </div>
             </div>
           </div>
