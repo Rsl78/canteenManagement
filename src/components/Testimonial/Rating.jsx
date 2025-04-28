@@ -1,14 +1,22 @@
 import React from 'react';
-
+import starIcon from "../../assets/icon/star.svg";
+import starFilledIcon from "../../assets/icon/starFilled.svg";
 const Rating = () => {
     return (
 
-            <div className="rating rating-xs">
-                <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" aria-label="1 star" />
-                <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" aria-label="2 star"  />
-                <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" aria-label="3 star" />
-                <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" aria-label="4 star" />
-                <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" aria-label="5 star" defaultChecked/>
+            <div className="flex items-center justify-center">
+
+                <img className={"h-4 w-4"} src={starFilledIcon} alt="star" />
+                <img className={"h-4 w-4"} src={starFilledIcon} alt="star" />
+                <img className={"h-4 w-4"} src={starFilledIcon} alt="star" />
+                <img className={"h-4 w-4"} src={starFilledIcon} alt="star" />
+                <img className={"h-4 w-4"} src={starIcon} alt="star" />
+
+                {/*<input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" aria-label="1 star" />*/}
+                {/*<input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" aria-label="2 star"  />*/}
+                {/*<input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" aria-label="3 star" />*/}
+                {/*<input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" aria-label="4 star" />*/}
+                {/*<input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" aria-label="5 star" defaultChecked/>*/}
             </div>
 
     );

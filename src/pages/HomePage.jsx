@@ -5,8 +5,9 @@ import Footer from "../components/Footer.jsx";
 import CategoryCard from "../components/Category/CategoryCard.jsx";
 import CategorySection from "../components/Category/CategorySection.jsx";
 import TestimonialSection from "../components/Testimonial/TestimonialSection.jsx";
-import HeroSection from "../components/HeroSection.jsx";
+import HeroSection from "../components/HeroSection/HeroSection.jsx";
 import FeaturedFoodSection from "../components/FeaturedFood/FeaturedFoodSection.jsx";
+import HomePageHeroContent from "../components/HeroSection/HomePageHeroContent.jsx";
 
 const HomePage = () => {
   const [isHeroVisible, setIsHeroVisible] = useState(true);
@@ -43,8 +44,10 @@ const HomePage = () => {
 
   return (
     <div className="bg-eggshell-white space-y-20">
-      
-      <HeroSection ref={heroRef} />
+      <HeroSection ref={heroRef}>
+          <HomePageHeroContent/>
+      </HeroSection>
+      {/*<HeroSection ref={heroRef} />*/}
 
       <CategorySection />
       <FeaturedFoodSection />
