@@ -11,7 +11,7 @@ const HeroSection = ({ ref,children }) => {
       }}
     >
       <div className="hero-overlay"></div>
-      <div className="hero-content h-120 text-neutral-content text-center">
+      <div className="hero-content h-150 text-neutral-content text-center">
           {/*<div className="max-w-md my-20">*/}
           {/*    <h1 className="mb-5 text-5xl font-bold">Hello there</h1>*/}
           {/*    <p className="mb-5">*/}

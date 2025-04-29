@@ -2,6 +2,7 @@ import React from 'react';
 import ShortCartCard from "../components/ShortCart/ShortCartCard.jsx";
 import CartCard from "../components/Cart/CartCard.jsx";
 import CartButton from "../components/Cart/CartButton.jsx";
+import InstructionBox from "../components/Cart/InstructionBox.jsx";
 
 const CartPage = () => {
     return (
@@ -18,6 +19,8 @@ const CartPage = () => {
                                     <CartCard key={{index}} itemName = {index}/>
                                 ))
                             }
+
+                            <InstructionBox/>
                         </div>
 
                     </div>

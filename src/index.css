@@ -27,6 +27,8 @@
 }
 
 
+
+
 @theme {
     --color-eggshell-white: #FAF5EE;
     --color-dark-emerald: #1D503A;
@@ -40,6 +42,10 @@
 .no-scrollbar::-webkit-scrollbar {
     display: none;
     /* Chrome, Safari, and Opera */
+}
+
+body {
+    font-family: var(--font-primary);
 }
 
 .no-scrollbar {
