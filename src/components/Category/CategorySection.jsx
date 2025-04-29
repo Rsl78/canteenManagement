@@ -14,13 +14,13 @@ const CategorySection = () => {
     return (
         <div className="container mx-auto items-center">
             <div className="flex justify-between gap-10 m-10 overflow-x-scroll no-scrollbar">
-                <CategoryCard icon={breakfastIcon} title={"Breakfast"} />
-                <CategoryCard icon={lunchIcon} title={"Lunch"} />
-                <CategoryCard icon={dinnerIcon} title={"Dinner"} />
-                <CategoryCard icon={snackIcon} title={"Snack"} />
-                <CategoryCard icon={beverageIcon} title={"Beverage"} />
-                <CategoryCard icon={iceCreamIcon} title={"Ice Cream"} />
-                <CategoryCard icon={dessertIcon} title={"Dessert"} />
+                <CategoryCard icon={breakfastIcon} title={"Breakfast"} category ={"Breakfast"} />
+                <CategoryCard icon={lunchIcon} title={"Lunch"} category={"Lunch"}/>
+                <CategoryCard icon={dinnerIcon} title={"Dinner"} category={"Dinner"} />
+                <CategoryCard icon={snackIcon} title={"Snack"} category = {"Snacks"}/>
+                <CategoryCard icon={beverageIcon} title={"Beverage"} category = {"Beverages"} />
+                <CategoryCard icon={iceCreamIcon} title={"Ice Cream"} category = {"Icecream"}/>
+                <CategoryCard icon={dessertIcon} title={"Dessert"} category ={"Dessert"} />
             </div>
         </div>
     );

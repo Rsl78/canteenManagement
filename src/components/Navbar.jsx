@@ -6,6 +6,7 @@ import { useAuth } from "../hooks/useAuth.js";
 const Navbar = () => {
     const navigate = useNavigate();
     const { auth } = useAuth();
+    console.log(auth);
     return (
         <div className="navbar shadow-sm fixed top-0 left-0 right-0 z-50 bg-green-900/20 backdrop-blur-xs text-white">
             <div className="container flex mx-auto">

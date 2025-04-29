@@ -10,7 +10,7 @@
     & :where(li) {
         & > :not(ul, .menu-title, details, .btn):active, & > :not(ul, .menu-title, details, .btn).menu-active, & > details > summary:active {
             /*color: var(--menu-active-fg);*/
-            background-color: #1D503A;
+            background-color: transparent;
             /*background-size: auto, calc(var(--noise) * 100%);*/
             /*background-image: none, var(--fx-noise);*/
         }
@@ -30,7 +30,11 @@
 
 
 @theme {
-    --color-eggshell-white: #FAF5EE;
+    /*--color-eggshell-white: #FAF5EE;*/
+    /*--color-eggshell-white: #FAF5EE;*/
+    /*--color-eggshell-white: #FAF5EE;*/
+    /*--color-eggshell-white: #FAF5EE;*/
+    --color-eggshell-white: #fbfee7;
     --color-dark-emerald: #1D503A;
     --font-primary: "Montserrat", sans-serif;
 }

@@ -1,13 +1,14 @@
-import React, { useState } from "react";
-import HeroSection from "../components/HeroSection/HeroSection.jsx";
-import Card from "../components/Card";
-import ShortCartCard from "../components/ShortCart/ShortCartCard.jsx";
-import DetailsModal from "../components/Modal/DetailsModal.jsx";
 import MenuPageHeroContent from "../components/HeroSection/MenuPageHeroContent.jsx";
-import { useLoaderData } from "react-router";
+import HeroSection from "../components/HeroSection/HeroSection.jsx";
+import React, {useState} from "react";
+import DetailsModal from "../components/Modal/DetailsModal.jsx";
+import Card from "../components/Card.jsx";
+import ShortCartCard from "../components/ShortCart/ShortCartCard.jsx";
 import InstructionBox from "../components/Cart/InstructionBox.jsx";
+import {useLoaderData} from "react-router";
 
-const MenuPage = () => {
+
+const CategoryFoodPage = () => {
     const initialMenuItems = useLoaderData();
     const [menuItems, setMenuItems] = useState(initialMenuItems);
     const [showModal, setShowModal] = useState(false);
@@ -21,51 +22,33 @@ const MenuPage = () => {
     const handleSearch = (searchQuery) => {
         if (searchQuery === "") {
             setMenuItems(initialMenuItems);
-
             return;
         }
         fetch(`http://192.168.68.157:8083/searchfoods?food_name=${searchQuery}`)
-            .then((response) => {
-                if (!response.ok) {
-                    throw new Error("Network response was not ok");
-                }
-                return response.json();
-            })
-            .then((data) => {
-                if (data && data.length > 0) {
-                    setMenuItems(data);
-                } else {
-                    setMenuItems([]);
-                }
-            })
-            .catch((error) => {
-                console.error("Error searching foods:", error);
-                setMenuItems([]);
-            });
+            .then((response) => response.json())
+            .then((data) => setMenuItems(data))
+            .catch((error) => console.error("Error searching foods:", error));
     };
-
     return (
-        <div className="bg-eggshell-white min-h-screen">
+        <div className="bg-eggshell-white space-y-20">
             <HeroSection>
                 <MenuPageHeroContent onSearch={handleSearch} />
             </HeroSection>
             <div className="container mx-auto py-10">
-                {showModal && (
-                    <DetailsModal item={selectedItem} setShowModal={setShowModal} />
-                )}
+                {/*{showModal && (*/}
+                {/*    <DetailsModal item={selectedItem} setShowModal={setShowModal} />*/}
+                {/*)}*/}
                 <div className="grid grid-cols-7 gap-6">
                     <div className="col-span-5">
                         <div className="h-[calc(100vh-250px)] no-scrollbar overflow-y-auto pr-4">
                             <div className="flex flex-wrap justify-evenly gap-y-6">
-                                { menuItems.length > 0 ?
-                                    menuItems.map((item) => (
-                                        <Card
-                                            key={item.food_id}
-                                            item={item}
-                                            onCardButtonClick={handleCardButtonClick}
-                                        />
-                                    )) : <p className={"font-semibold text-xl"}>No item found</p>
-                                }
+                                {menuItems?.map((item) => (
+                                    <Card
+                                        key={item.food_id}
+                                        item={item}
+                                        onCardButtonClick={handleCardButtonClick}
+                                    />
+                                ))}
                             </div>
                         </div>
                     </div>
@@ -94,4 +77,4 @@ const MenuPage = () => {
     );
 };
 
-export default MenuPage;
+export default CategoryFoodPage;

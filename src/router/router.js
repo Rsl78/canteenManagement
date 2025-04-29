@@ -9,6 +9,7 @@ import OrderPage from "../pages/OrderPage.jsx";
 import CartPage from "../pages/CartPage.jsx";
 import {featuredFoodLoader} from "../Loader/FeaturedFoodLoader.js";
 import {homePageLoader} from "../Loader/HomePageLoader.js";
+import axios from "axios";
 
 
 export const router = createBrowserRouter([
@@ -36,6 +37,21 @@ export const router = createBrowserRouter([
                 path: "/menu",
                 Component: MenuPage,
                 loader: menuLoader,
+            },
+            {
+                path: "/menu/:category",
+                Component: MenuPage,
+                loader: async ({params}) =>{
+                    const { category } = params;
+                    try {
+                        const response = await axios.get(`http://192.168.68.157:8083/foodlist/${category}`);
+                        return response.data;
+                    } catch (error) {
+                        console.error("Failed to fetch menu items:", error);
+                        console.error('Error loading data:', error);
+                        return null;
+                    }
+                },
             },
             {
                 path: "/cart",
