@@ -2,7 +2,7 @@ import React from 'react';
 import FeaturedFoodCard from "./FeaturedFoodCard.jsx";
 import TestimonialCard from "../Testimonial/TestimonialCard.jsx";
 
-const FeaturedFoodSection = () => {
+const FeaturedFoodSection = ({featuredFoodData}) => {
     return (
 
         <div className="overflow-hidden w-full py-8 container mx-auto">
@@ -13,17 +13,20 @@ const FeaturedFoodSection = () => {
 
 
             <div className="flex animate-[scrollRTL_20s_linear_infinite] gap-5">
-                <FeaturedFoodCard/>
-                <FeaturedFoodCard/>
-                <FeaturedFoodCard/>
-                <FeaturedFoodCard/>
-                <FeaturedFoodCard/>
-                {/* Duplicate cards for seamless looping */}
-                <FeaturedFoodCard/>
-                <FeaturedFoodCard/>
-                <FeaturedFoodCard/>
-                <FeaturedFoodCard/>
-                <FeaturedFoodCard/>
+                {
+                   featuredFoodData?.map(item => <FeaturedFoodCard key={item?.food_id} item={item}/>)
+                }
+                {/*<FeaturedFoodCard/>*/}
+                {/*<FeaturedFoodCard/>*/}
+                {/*<FeaturedFoodCard/>*/}
+                {/*<FeaturedFoodCard/>*/}
+                {/*<FeaturedFoodCard/>*/}
+                {/*/!* Duplicate cards for seamless looping *!/*/}
+                {/*<FeaturedFoodCard/>*/}
+                {/*<FeaturedFoodCard/>*/}
+                {/*<FeaturedFoodCard/>*/}
+                {/*<FeaturedFoodCard/>*/}
+                {/*<FeaturedFoodCard/>*/}
             </div>
         </div>
     );

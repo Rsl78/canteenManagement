@@ -8,18 +8,12 @@ import TestimonialSection from "../components/Testimonial/TestimonialSection.jsx
 import HeroSection from "../components/HeroSection/HeroSection.jsx";
 import FeaturedFoodSection from "../components/FeaturedFood/FeaturedFoodSection.jsx";
 import HomePageHeroContent from "../components/HeroSection/HomePageHeroContent.jsx";
+import {useLoaderData} from "react-router";
 
 const HomePage = () => {
   const [isHeroVisible, setIsHeroVisible] = useState(true);
   const heroRef = useRef(null);
-  // const [foodData, setFoodData] = useState([]);
-
-  // useEffect(() => {
-  //     fetch("http://192.168.68.157:8083/foodlist")
-  //         .then(response => response.json())
-  //         .then(data => setFoodData(data))
-  //         .catch(error => console.error("Error fetching data:", error));
-  // }, []);
+  const {featuredFood, testimonials} = useLoaderData();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -50,8 +44,8 @@ const HomePage = () => {
       {/*<HeroSection ref={heroRef} />*/}
 
       <CategorySection />
-      <FeaturedFoodSection />
-      <TestimonialSection />
+      <FeaturedFoodSection featuredFoodData={featuredFood}/>
+      <TestimonialSection testimonialsData={ testimonials}/>
       {/* <Footer /> */}
     </div>
   );
